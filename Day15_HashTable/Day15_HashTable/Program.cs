@@ -1,7 +1,7 @@
 ﻿using Day15_HashTable;
 class program
 {
-    MyMapNode<string, string> hash = new MyMapNode<string, string>(5);
+    MyMapNode<string, string> hash = new MyMapNode<string, string>(18);
     public void Frequencystr(string sentence)
     {
         string[] sentnc = sentence.Split(' ');
@@ -22,10 +22,10 @@ class program
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the HashTable Program");
-        string sentence = "To be or not to be";
+        string sentence ="Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
         program obj= new program();
         obj.Frequencystr(sentence);
-        Console.WriteLine("Enter index value from 0 to 5  ");
+        Console.WriteLine("Enter index value from 0 to 18 ");
         int i = Convert.ToInt32(Console.ReadLine());
         string code = obj.hash.Get($"{i}");
         Console.WriteLine($"\nIndex {i}'s value is : {code}" );
